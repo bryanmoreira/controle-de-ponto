@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PontoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(LoginController::class)->group(function(){
+    Route::get('/', 'index')->name('login.index');
+    Route::post('/login', 'store')->name('login.store');
+    Route::get('/login', 'destroy')->name('login.destroy');
+});
+
+Route::controller(PontoController::class)->group(function(){
+    Route::get('/ponto', 'index')->name('ponto.index');
 });
