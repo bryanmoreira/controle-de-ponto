@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PontoController;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,4 +25,8 @@ Route::controller(LoginController::class)->group(function(){
 
 Route::controller(PontoController::class)->group(function(){
     Route::get('/ponto', 'index')->name('ponto.index');
+});
+
+Route::controller(DashboardController::class)->group(function(){
+    Route::get('/dashboard', 'index')->name('dashboard.index');
 });

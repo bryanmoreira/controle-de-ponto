@@ -28,6 +28,10 @@ class LoginController extends Controller
             return redirect()->route('login.index')->withErrors(['error' => 'CPF ou senha inválidos.']);
         }
 
+        if(Auth::user()->admin) {
+            return redirect()->route('dashboard.index');
+        }
+
         return redirect()->route('ponto.index');
     }
 
