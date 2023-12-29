@@ -4,7 +4,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('css/pontoStyle.css') }}">
 <div class="container">
     <h2 class="heading">
         <a href="#" id="pontoButton">Bater Ponto<span class="check-icon"><i class="fas fa-check"></i></span></a>
@@ -14,7 +14,7 @@
     <div class="second-click-time center-text" id="secondClickTime"></div>
 </div>
 
-<script src="{{ asset('js/script.js') }}"></script>
+<script src="{{ asset('js/ponto.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 
 @endsection
