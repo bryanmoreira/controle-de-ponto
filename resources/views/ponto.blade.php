@@ -3,7 +3,8 @@
 @section('title', 'Ponto')
 
 @section('content')
-<!--
+
+
 <link rel="stylesheet" href="{{ asset('css/pontoStyle.css') }}">
 <div class="container">
     <h2 class="heading">
@@ -16,7 +17,7 @@
 
 <script src="{{ asset('js/ponto.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
--->
+
 
 <h2>Bater ponto</h2>
 {{ auth()->user()->name }} | <a href="{{ route('login.destroy') }}">Log out</a>
