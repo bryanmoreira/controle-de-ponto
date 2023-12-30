@@ -9,10 +9,10 @@ body {
 
 .container {
     max-width: 600px;
-    padding: 20px;
+    padding: 30px;
     background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .heading {
@@ -22,7 +22,7 @@ body {
 .heading a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #2cded5;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -34,32 +34,39 @@ body {
     background-color: #2980b9;
 }
 
-.heading a.active {
-    background-color: #e74c3c;
+.heading a.active:hover {
+    background-color: #db18b8;
 }
 
+/* expediente completo */
 .heading a.completed {
-    background-color: #95a5a6; 
+    background-color: #00ff55; 
     pointer-events: none; /* Desabilita eventos do mouse quando estiver concluído */
 }
 
-.check-icon {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%);
-    color: #27ae60; 
-    display: none;
+/* inicio do expediente */
+ .heading a.first{
+    background-color: #d4401c;
+ }          
+
+/* durante almoço */
+.heading a.almoco {
+    background-color: #d4401c;
 }
 
-.heading a.active .check-icon {
-    display: block;
+/* prestes a finalizar o expediente */
+.heading a.active {
+    background-color: #ed1165;
+}
+
+.check-icon {
+    color: #27ae60;
+    margin-left: 0.6rem;
 }
 
 .message {
     text-align: center;
     margin-top: 20px;
-    display: none;
 }
 
 .heading a.completed + .message {
