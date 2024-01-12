@@ -25,6 +25,7 @@ Route::controller(LoginController::class)->group(function(){
 
 Route::controller(PontoController::class)->group(function(){
     Route::get('/ponto', 'index')->name('ponto.index');
+    Route::post('/ponto/store', 'store')->name('ponto.store');
 });
 
 Route::controller(DashboardController::class)->group(function(){

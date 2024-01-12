@@ -14,7 +14,7 @@
     @csrf
 
     <label for="cpf">CPF</label>
-    <input type="text" name="cpf" value="12345678910" maxlength="11" minlength="11">
+    <input type="text" name="cpf" value="98765432101" maxlength="11" minlength="11">
     @error('cpf')
         <span>{{ $message }}</span>
     @enderror
