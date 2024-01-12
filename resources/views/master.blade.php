@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <title>@yield('title') | Controle de Ponto</title>
+    @vite('resources/css/app.css')
 </head>
 <body>
     @yield('content')
