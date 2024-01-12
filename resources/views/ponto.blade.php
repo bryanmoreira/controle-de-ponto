@@ -5,7 +5,11 @@
 @section('content')
 
 @if ($hora)
-    <h1>Ponto batido: {{ $hora }}</h1>
+    <h1>Último registro: {{ $hora }}</h1>
+@endif
+
+@if ($mensagem)
+    <h1>{{ $mensagem }}</h1>
 @endif
 
 

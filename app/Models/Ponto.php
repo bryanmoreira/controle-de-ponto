@@ -11,6 +11,12 @@ class Ponto extends Model
 
     protected $fillable = [
         'user_id',
+        'cpf',
         'user_name',
+        'data',
+        'inicio_expediente',
+        'inicio_almoco',
+        'final_almoco',
+        'final_expediente',
     ];
 }
