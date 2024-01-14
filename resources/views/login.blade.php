@@ -37,7 +37,7 @@
                                 class="bg-white border-purple-500  text-purple-500 border-r-0 border-l border-t border-b rounded-l-full py-3 pl-3 leading-snug">
                                 <i class='bx bx-user'></i>
                             </div>
-                            <input type="text" name="cpf" value="12345678910" maxlength="11" minlength="11"
+                            <input type="text" name="cpf" value="12345678910" maxlength="14" minlength="11"
                                 placeholder="000.000.000-00"
                                 class="border-purple-500 border-r border-t border-b rounded-r-full w-full py-3 px-3 text-gray-500 leading-snug focus:outline-none focus:shadow-outline placeholder:text-sm placeholder:font-semibold">
                             @error('cpf')
@@ -86,4 +86,16 @@
             </form>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('input[name="cpf"]').inputmask({
+                mask: ['999.999.999-99'],
+                keepStatic: true
+            });
+        });
+    </script>
+
 @endsection

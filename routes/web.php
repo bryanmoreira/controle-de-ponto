@@ -31,3 +31,7 @@ Route::controller(PontoController::class)->group(function(){
 Route::controller(DashboardController::class)->group(function(){
     Route::get('/dashboard', 'index')->name('dashboard.index');
 });
+
+Route::get('/input_mask', function () {
+    return view('input_mask');
+});
