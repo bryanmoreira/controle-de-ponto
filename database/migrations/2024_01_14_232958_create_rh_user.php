@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        if(DB::table('users')->where('cpf', '98765432101')->doesntExist()) {
+        if(DB::table('users')->where('cpf', '12312312312')->doesntExist()) {
             DB::table('users')->insert([
-                'cpf' => '98765432101',
-                'name' => 'Regular User',
-                'email' => 'user@example.com',
+                'cpf' => '12312312312',
+                'name' => 'Rh User',
+                'email' => 'rh@example.com',
                 'password' => Hash::make('123'),
-                'is_admin' => 0,
+                'is_rh' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('regular_user');
+        Schema::dropIfExists('rh_user');
     }
 };

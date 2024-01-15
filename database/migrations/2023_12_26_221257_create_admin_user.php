@@ -20,7 +20,7 @@ return new class extends Migration
                 'name' => 'Admin User',
                 'email' => 'admin@example.com',
                 'password' => Hash::make('123'),
-                'admin' => 1,
+                'is_admin' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
